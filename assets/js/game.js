@@ -15,6 +15,7 @@ var chars = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q'
 function printGallows(){
   if(done == true && wrong < 6){
     $("#gallows").html("<h1>YOU WIN</h1>");
+    $("#gallows").append("<h2>Press any key to play again</h2>");
   }else{
     if(wrong < 6 && wrong > 0){
       var elm = $("#" + gArray[wrong][0]);
