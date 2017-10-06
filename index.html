@@ -40,11 +40,12 @@
       printGallows();
 
       document.onkeyup = function(event) {
-        if($("#gallows").innerHTML=="<h1>YOU LOSE</h1>"){
+        var letter = String.fromCharCode(event.keyCode).toLowerCase();
+
+        if(done){
+          location.reload();
           return;
         }
-
-        var letter = String.fromCharCode(event.keyCode).toLowerCase();
 
         if(chars.includes(letter)){
           if(guessArr.includes(letter)){

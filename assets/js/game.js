@@ -31,6 +31,10 @@ function showWord() {
   var tempword = words[word].split('');
   console.log("wrong " + wrong);
 
+  if(wrong == 6){
+    done = true;
+  }
+
   for(i in tempword){
     if(!guessArr.includes(tempword[i]) && !done){
       divword+=" -";
